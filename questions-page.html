@@ -11,7 +11,7 @@
 <body>
     <header>
         <h1>Louisiana Facts <br> Quiz</h1>
-        <ul class="progress-nums hide-this">
+        <ul class="progress-nums">
             <li class="question-and-score-nums"> Question: 
                 <span class="question-num">0</span>/5
             </li>
@@ -22,24 +22,15 @@
     </header>
 
     <main role="main">
-        <fieldset class="center-box">
-            <div class="start-page">
-                <p>How much do you know about Louisiana?</p>
-                <img>
-                <button type="button" id="start-button">Let's Geaux!</button>
-            </div>
-            <div class="question-page hide-this">
-                <p></p>
+        <fieldset class="center-box">  
+            <div class="question-page">
+                <P><span class="questions">Louisiana is also known as the _______.</span><br><br>
+                    <input type="radio" name="questions" value="a"> Gumbo State<br><br>
+                    <input type="radio" name="questions" value="b"> Swamp State<br><br>
+                    <input type="radio" name="questions" value="c"> Pelican State<br><br>
+                    <input type="radio" name="questions" value="d"> Boot State<br>
+                </p>
                 <button type="button" id="submit-answer">Submit Answer</button>
-            </div>
-            <div class="results-page hide-this">
-                <ul class="results-info">
-                    <p>You Answered <br>
-                        <span class="final-score">0</span>/5 <br>
-                        Correct!
-                    </p>>
-                </ul>
-                <button type="button" id="restart-quiz">Geaux Again?</button>
             </div>
         </fieldset>
     </main>

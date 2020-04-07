@@ -51,10 +51,54 @@ button {
 
 }
 
-p {
+.start-page {
+    display: block;
     font-size: 40px;
 }
 
-.start-page {
+.question-page p {
+    display: block;
+    text-align: left;
+    font-size: 20px;
+
+}
+
+.questions {
+    font-size: 25px;
+}
+
+#submit-answer {
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 20px;
+    position: relative;
+    margin: 80px auto 5px auto;
+}
+
+.correct-page, .wrong-page {
+    font-size: 60px;
+}
+
+#next-question {
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 20px;
+    position: relative;
+    margin: 245px auto 5px auto;
+}
+
+.results-page {
+    font-size: 45px;
+}
+
+#restart-quiz {
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 20px;
+    position: relative;
+    margin: 160px auto 5px auto;
+}
+
+.correct-page, .wrong-page, .results-page {
     display: block;
 }
