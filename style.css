@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.hide-this {
+    display: none;
+}
+
+.question-and-page-nums {
+    display: inline;
+    margin: auto;
+    padding: 5px 20px;
+}
+
+h1 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+body {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: url(mardi-gras-background.jpg) fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px 50px 0px 50px;
+}
+
+.center-box {
+    border: 2px solid black;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    padding: 25px 50px;
+}
+
+button {
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 20px;
+    position: relative;
+    margin: 220px auto 5px auto;
+
+}
+
+p {
+    font-size: 40px;
+}
+
+.start-page {
+    display: block;
+}
