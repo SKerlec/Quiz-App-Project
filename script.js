@@ -114,7 +114,7 @@ function submitAnswer() {
 
 function questionLayout(questionIndex) {
     let formMaker = $(`<form>
-            <fieldset>
+            <fieldset class="new-box">
                 <legend class="questionText">${STORE[questionIndex].question}</legend>
             </fieldset>
         </form>`)
@@ -122,7 +122,7 @@ function questionLayout(questionIndex) {
     STORE[questionIndex].answers.forEach(function(answerValue, answerIndex) {
             $(`<label class="progress-nums" for="${answerIndex}">
                 <input class="radio" type="radio" id="${answerIndex}" value="${answerValue}" name="answer" required>
-                    <span>${answerValue}</span>
+                    <span class="choices">${answerValue}</span>
                 </input>
             </label>`).appendTo(questionSelector);
     });
@@ -132,20 +132,28 @@ function questionLayout(questionIndex) {
 
 function correctAnswer() {
     $('.feedback-page').html(
-        `<h2>That's Right!</h2>
-        <img src="correct-img.png" class="pics" alt="Happy Mardi-Gras Mask" width="200px">
-        <button type="button" class="next-question button">Next!</button>`
+        `<fieldset class="new-box">
+            <h2>That's Right!</h2>
+             <div class="pics">
+                <img src="correct-img.png" class="pics" alt="Happy Mardi-Gras Mask" width="200px">
+            </div>
+            <button type="button" class="next-question button">Next!</button>
+        </fieldset>`
     );
     newScore();
 }
 
 function wrongAnswer() {
     $('.feedback-page').html(
-        `<h2>...Wrong...</h2>
-        <img src="wrong-img.png" class="pics" alt="Hurrican Shape" width="200px">
-        <p>The correct answer is...</p>
-        <p>${STORE[questionNumber].correctAnswer}</p>
-        <button type="button" class="next-question button">Next!</button>`
+        `<fieldset class="new-box">
+            <h2>...Wrong...</h2>
+            <div class="pics">
+                <img src="wrong-img.png" class="pics" alt="Alligator Swimming" width="200px">
+            </div>
+            <p>The correct answer is...</p>
+            <p class="correction">${STORE[questionNumber].correctAnswer}</p>
+            <button type="button" class="next-question button">Next!</button>
+        </fieldset>`
     );
 }
 
@@ -161,12 +169,17 @@ function nextQuestion() {
 function finalScore() {
     $('.results-page').show();
     $('.results-page').html(`
-    <h2>You answered <br>
-    ${score}/5 <br>
-    correct!
-    </h2>
-    <button type="submit" class="restart-quiz button">Geaux Again?</button>`
+    <fieldset class="new-box">
+        <h3>You answered <br>
+        ${score}/5 correct!
+        </h3>
+        <div class="results-pic pics">
+            <img src="results-img.jfif" class="pics alt="Crawfish Boil">
+        </div>
+            <button type="submit" class="restart-quiz button">Geaux Again?</button>
+        </fieldset>`
     );
+    $('.progress-nums').hide();
 }
 
 function restartQuiz() {
@@ -175,6 +188,7 @@ function restartQuiz() {
         $('.alt-box').hide();
         resetNums();
         $('.start-page').show();
+        $('.progress-nums').show();
     });
 }
 
