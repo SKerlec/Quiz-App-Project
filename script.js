@@ -88,8 +88,10 @@ function newQuestionNum() {
 
 function startQuiz() {
     $('.alt-box').hide();
+    $('.progress-bar').hide();
     $('.center-box').on('click', '.start-button', function(event) {
         $('.start-page').hide();
+        $('.progress-bar').show();
         $('.question-num').text(1);
         $('.questions-page').show();
         $('.questions-page').prepend(generateQuestion());
@@ -134,8 +136,8 @@ function correctAnswer() {
     $('.feedback-page').html(
         `<fieldset class="new-box">
             <h2>That's Right!</h2>
-             <div class="pics">
-                <img src="correct-img.png" class="pics" alt="Happy Mardi-Gras Mask" width="200px">
+             <div class="pics other-pics">
+                <img src="correct-img.png" class="pics other-pics" alt="Happy Mardi-Gras Mask" width="200px">
             </div>
             <button type="button" class="next-question button">Next!</button>
         </fieldset>`
@@ -147,8 +149,8 @@ function wrongAnswer() {
     $('.feedback-page').html(
         `<fieldset class="new-box">
             <h2>...Wrong...</h2>
-            <div class="pics">
-                <img src="wrong-img.png" class="pics" alt="Alligator Swimming" width="200px">
+            <div class="pics other-pics">
+                <img src="wrong-img.png" class="pics other-pics" alt="Alligator Swimming" width="200px">
             </div>
             <p>The correct answer is...</p>
             <p class="correction">${STORE[questionNumber].correctAnswer}</p>
@@ -173,13 +175,13 @@ function finalScore() {
         <h3>You answered <br>
         ${score}/5 correct!
         </h3>
-        <div class="results-pic pics">
-            <img src="results-img.jfif" class="pics alt="Crawfish Boil">
+        <div class="results-pic pics other-pics">
+            <img src="results-img.jfif" class="pics other-pics" alt="Crawfish Boil">
         </div>
             <button type="submit" class="restart-quiz button">Geaux Again?</button>
         </fieldset>`
     );
-    $('.progress-nums').hide();
+    $('.progress-bar').hide();
 }
 
 function restartQuiz() {
@@ -188,7 +190,6 @@ function restartQuiz() {
         $('.alt-box').hide();
         resetNums();
         $('.start-page').show();
-        $('.progress-nums').show();
     });
 }
 
@@ -200,4 +201,4 @@ function runQuiz() {
     restartQuiz();
 }
 
-runQuiz();
+$(runQuiz());

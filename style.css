@@ -7,20 +7,20 @@
 
 li {
     display: inline;
-    padding: 0 20px 0 20px;
-    font-size: 15px;
+    padding: 0 1.3em;
+    font-size: 1rem;
 }
 
 h1 {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 25px;
+    margin-top: 2em;
+    font-size: 2.5rem;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
     background: url(mardi-gras-background.jpg) fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -28,14 +28,15 @@ body {
 }
 
 .center-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     border: dotted 4px black;
     border-radius: 25px;
     background-image: radial-gradient(yellow, purple);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0px;
-    display: flex;
-    flex-direction: column;
+    width: 50%;
+    padding: 1em;
+    margin: auto;
 }
 
 button {
@@ -43,11 +44,10 @@ button {
     border-radius: 25px;
     background-color: black;
     color: white;
-    width: 100px;
-    padding: 10px 20px;
-    font-size: 10px;
-    position: relative;
-    margin: auto auto auto auto;
+    width: 50%;
+    padding: .75em 1.25em;
+    font-size: .8rem;
+    margin: 0 auto;
 }
 
 button:hover, button:focus {
@@ -55,12 +55,18 @@ button:hover, button:focus {
     color: black;
 }
 
-.pics {
-    margin: 20px auto 20px auto;
+.la-state-pic {
+    width: 40%;
+    margin: 1.3em auto;
+}
+
+.other-pics {
+    margin: 1em auto;
+    width: 60%;
 }
 
 .box {
-    font-size: 15px;
+    font-size: 1.25rem;
 }
 
 .new-box {
@@ -71,65 +77,14 @@ button:hover, button:focus {
 }
 
 .submit-answer {
-    margin-top: 20px;
+    margin-top: 1.3em;
 }
 
 .radio {
-    margin-top: 25px;
+    margin-top: 1.75em;
 }
 
 .correction {
-    margin: auto auto 25px auto;
+    margin: auto auto 1.75em auto;
 }
 
-.results-pic {
-    margin: 0 0 0 0;
-}
-
-@media screen and (min-width: 500px ) {
-
-    .center-box {
-        width: 500px;
-    }
-
-    button {
-        width: 150px;
-        padding: 10px 20px;
-        font-size: 15px;
-    }
-
-    .progress-bar {
-        margin-top: 20px;
-    }
-
-}
-
-@media screen and (min-width: 800px) {
-
-    body {
-        padding: 10px 50px 0px 50px;
-    }
-
-    .progress-bar {
-        margin-top: 40px;
-    }
-
-    .center-box {
-        width: 600px;
-    }
-
-    .box {
-        font-size: 25px;
-    }
-
-    button {
-        width: 200px;
-        padding: 10px 20px;
-        font-size: 20px;
-    }
-
-    h1 {
-        font-size: 40px;
-    }
-    
-}
